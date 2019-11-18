@@ -11,7 +11,7 @@ pipeline {
           // 'execute ls command' 라는 메시지를 출력
           echo 'execute ls command'
           // shell의 명령어 'ls -la'실행
-          sh 'ls -la'
+          sh 'dir'
         }
       }
       // 두번째 작업('Where do ls command execute?')을 선언 
@@ -21,13 +21,13 @@ pipeline {
           // 'Here is default.' 라는 메시지를 출력
           echo 'Here is default.'
           // shell의 명령어 'ls -la'실행
-          sh 'ls -la'
+          sh 'dir'
           // 'you can define where to execute command.' 라는 메시지를 출력
           echo 'you can define where to execute command.'
           // 'For example, I want to view root directory' 라는 메시지를 출력
           echo 'For example, I want to view root directory'
           // shell의 명령어 'ls -la /'실행
-          sh 'ls -la /'
+          sh 'dir /A'
         }
       }
       // 세번째 작업('Is there any other way?')을 선언
