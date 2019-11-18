@@ -23,9 +23,9 @@ pipeline {
           bat 'chdir'
           bat 'dir /A'
           echo 'If you want to execute multiple commands in one sh.'
-          bat '''cd /
-          chdir /
-          bat dir /A'''
+          bat '''cd
+          chdir
+          dir /A'''
         }
       }
     }
