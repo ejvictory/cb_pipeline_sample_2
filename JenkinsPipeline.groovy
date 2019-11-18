@@ -11,7 +11,7 @@ pipeline {
           // 'execute ls command' 라는 메시지를 출력
           echo 'execute ls command'
           // shell의 명령어 'ls -la'실행
-          sh 'dir'
+          bat 'dir'
         }
       }
       // 두번째 작업('Where do ls command execute?')을 선언 
@@ -21,13 +21,13 @@ pipeline {
           // 'Here is default.' 라는 메시지를 출력
           echo 'Here is default.'
           // shell의 명령어 'ls -la'실행
-          sh 'dir'
+          bat 'dir'
           // 'you can define where to execute command.' 라는 메시지를 출력
           echo 'you can define where to execute command.'
           // 'For example, I want to view root directory' 라는 메시지를 출력
           echo 'For example, I want to view root directory'
           // shell의 명령어 'ls -la /'실행
-          sh 'dir /A'
+          bat 'dir /A'
         }
       }
       // 세번째 작업('Is there any other way?')을 선언
@@ -37,15 +37,13 @@ pipeline {
            // 'Maybe sh is independent' 라는 메시지를 출력
           echo 'Maybe sh is independent'
           // sh 명령어 개별로 사용하여  cd / , pwd , ls -la 명령어를 실행
-          sh 'cd /'
-          sh 'pwd'
-          sh 'ls -la'
+          bat 'cd /'
+          bat 'dir /A'
           // 'If you want to execute multiple commands in one sh.' 라는 메시지를 출력
           echo 'If you want to execute multiple commands in one sh.'
           // sh 명령어를 묶어서 cd / , pwd , ls -la 명령어를 실행
-          sh '''cd /
-          pwd
-          ls -la'''
+          bat '''cd /
+          dir /A''
         }
       }
     }
