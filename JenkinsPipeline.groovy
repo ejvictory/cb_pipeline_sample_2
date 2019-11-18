@@ -38,12 +38,14 @@ pipeline {
           echo 'Maybe sh is independent'
           // sh 명령어 개별로 사용하여  cd / , pwd , ls -la 명령어를 실행
           bat 'cd /'
+          chdir
           bat 'dir /A'
           // 'If you want to execute multiple commands in one sh.' 라는 메시지를 출력
           echo 'If you want to execute multiple commands in one sh.'
           // sh 명령어를 묶어서 cd / , pwd , ls -la 명령어를 실행
-          bat '''cd /
-          dir /A''
+          bat 'cd /'
+          chdir
+          dir /A
         }
       }
     }
