@@ -4,6 +4,7 @@ pipeline {
       stage('execute ls command') {
         steps {
           echo 'execute ls command'
+	  echo 'Test 1'
           bat 'dir'
         }
       }
